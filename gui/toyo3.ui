@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>toyo</class>
+ <widget class="QMainWindow" name="toyo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Angsana New</family>
+    <pointsize>26</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>โปรแกรมเพิ่มข้อมูลพนังงาน</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lbl_emp_name">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Angsana New</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ชื่อพนักงาน</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_position">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Angsana New</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ตำแหน่ง</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_salary">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Angsana New</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>เงินเดือน</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAdd">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>240</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Angsana New</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>เพิ่มข้อมูล</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnClear">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>240</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Angsana New</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ยกเลิก</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>310</y>
+      <width>611</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Angsana New</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <column>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Position</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>EmpName</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Salary</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLineEdit" name="txt_emp_name">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>10</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_position">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>90</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_salary">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>160</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>42</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnClear</sender>
+   <signal>clicked()</signal>
+   <receiver>txt_emp_name</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>466</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnClear</sender>
+   <signal>clicked()</signal>
+   <receiver>txt_position</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>361</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnClear</sender>
+   <signal>clicked()</signal>
+   <receiver>txt_salary</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>456</x>
+     <y>320</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
